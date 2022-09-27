@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js"></script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Navigation Bar start -->
+    <nav>
+        <div id="left-nav">
+            <p>Travel</p>
+        </div>
+
+        <div id="right-nav">
+                <ul>
+                    <li onclick="home()">Home</li>
+                    <li onclick="tour()">Our Tour</li>
+                    <li onclick="book()">Book</li>
+                    <li>About</li>
+                </ul>
+        </div>
+        <div id="menu-box">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+    <!-- Navigation Bar End -->
+
+    <!-- Landing page start -->
+    <div id="landing-page">
+        <div id="top-land"></div>
+        <div id="bottom-land">
+            <h1>The journey of a thousand miles <br> begins with a <span>single step</span>.</h1>
+        </div>
+    </div>
+    <!-- Landing page end -->
+
+
+    <div id="our-tour">
+        <div class="title"><h1>Try Our Tour</h1></div>
+        
+        <div class="row">
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/vietnam.jpeg">
+                </div>
+                <div class="tour-text">
+                    <h2>vietnam</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/istanbul.jpeg">
+                </div>
+                <div class="tour-text">
+                    <h2>Istanbul, Turkey</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/taj-mahal.jpg">
+                </div>
+                <div class="tour-text">
+                    <h2>Agra, India</h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/dubai.jpg">
+                </div>
+                <div class="tour-text">
+                    <h2>Dubai, UAE</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/buckingham.jpeg">
+                </div>
+                <div class="tour-text">
+                    <h2>London, UK</h2>
+                </div>
+            </div>
+            <div class="card">
+                <div class="city-img">
+                    <img src="./images/pyramid.jpg">
+                </div>
+                <div class="tour-text">
+                    <h2>Giza, Egypt</h2>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <!-- Booking form Start -->
+    <form action="">
+
+    <div id="main-container">
+        <h2>Book Your Ticket</h2>
+        <hr>
+
+        <div class="customer-details">
+            <div class="detail-container">
+                <span>From</span>
+                <div class="input-container">
+                    <img src="./images/takeoff-the-plane.png" width="25px">
+                    <input type="text" placeholder="Flying from" id="from-city">
+                </div>
+            </div>
+
+            <div class="detail-container">
+                <span>To</span>
+                <div class="input-container">
+                    <img src="./images/plane-landing.png" width="25px">
+                    <input type="text" placeholder="Flying to" id="to-city" value="">
+                </div>
+            </div>
+
+            <div class="detail-container">
+                <span>Departure</span>
+                <div class="input-container">
+                    <!-- <img src="./images/plane-landing.png" width="25px"> -->
+                    <input type="Date" class="date" id="fly">
+                </div>
+            </div>
+
+            <div class="detail-container">
+                <span>Returning</span>
+                <div class="input-container">
+                    <!-- <img src="./images/plane-landing.png" width="25px"> -->
+                    <input type="Date" class="date" id="land">
+                </div>
+            </div>
+
+           <a href="#">
+            <button id="submit" type="button" onclick="button()">Submit</button>
+           </a> 
+        </div>
+    </div>
+
+    </form>
+
+    <div id="output"></div>
+    <!-- Booking form End -->
+
+
+<div class="congra-container">
+        <!-- Congratulations message start -->
+        <div id="humburger">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </div>
+        <div id="top-congra">
+
+        </div>
+        <!-- Congratulations message end -->
+
+
+        <!-- Ticket design start -->
+        <div id="ticket-window">
+            <div id="ticket">
+                <div id="left-ticket">
+                    <div id="left-ticket-nav">
+                        <img src="./images/plane.png" alt="">
+                        <h2>Flight Ticket</h2>
+                    </div>
+                    <div id="left-main-ticket">
+                        <div id="left-left-main">
+                            <div id="left-name">
+                                <p>Passenger Name</p>
+                                <h3 id="person-name">______</h3>
+                            </div>
+                            <div id="left-from">
+                                <div id="from">
+                                    <p>From</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="carrier">
+                                    <p>Carrier</p>
+                                    <h3>______</h3>
+                                </div>
+                            </div>
+                            <div id="left-to">
+                                <div id="to">
+                                    <p>To</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="date">
+                                    <p>Date</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="time">
+                                    <p>Time</p>
+                                    <h3>______</h3>
+                                </div>
+                            </div>
+                            <div id="left-flight">
+                                <div id="flight">
+                                    <p>Flight</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="seat">
+                                    <p>Seat</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="gate">
+                                    <p>Gate</p>
+                                    <h3>______</h3>
+                                </div>
+                                <div id="board-till">
+                                    <p>Board till</p>
+                                    <h3>______</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="left-right-main">
+                            <img src="./images/barcode.png">
+                        </div>
+                    </div>
+        
+                </div>
+                <div id="right-ticket">
+                    <div id="right-ticket-nav">
+                        <h2>Flight Ticket</h2>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+        <!-- Ticket design end -->
+</div>
+
+
+        
+
+
+
+
+    <script src="./web.js"></script>
+</body>
+</html>

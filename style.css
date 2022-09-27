@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+}
+/* Navigation style Starts */
+nav{
+    display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; right: 0; left: 0; padding: 15px 3%;
+    background-color: #dcdcdc; font-family: 'Poppins'; box-shadow: 0 0 5px 1px black; z-index: 100;
+}
+#left-nav p{
+    font-size: 20px; cursor: pointer;
+}
+#right-nav{
+    display: flex; align-items: center;
+}
+nav ul{
+    display: flex; gap: 25px; list-style: none;
+}
+nav ul li{
+    padding: 10px 15px; cursor: pointer; transition: 0.5s;
+}
+nav ul li:hover{
+    transform: translateY(-3px); color: green; transition: 0.5s; font-weight: bold;
+}
+#right-nav.active ul li:hover{
+    transform: translateX(5px);
+}
+
+#menu-box{
+    cursor: pointer; display: none; padding: 5px;
+}
+#menu-box.clicked .bar:nth-child(1){
+    transform: translateY(7px) rotate(135deg); transition: 0.7s;
+}
+#menu-box.clicked .bar:nth-child(2) {
+    opacity: 0; transition: 0.7s;
+}
+#menu-box.clicked .bar:nth-child(3) {
+    transform: translateY(-7px) rotate(-135deg); transition: 0.7s;
+}
+.bar{
+    display: block; width: 25px; height: 3px; background-color: black; transition: 0.7s;
+}
+.bar:nth-child(2){
+    margin: 4px 0;
+}
+
+/* Navigation Style Ends */
+
+/* Landing page style start */
+#landing-page{
+    width: 100%; height: 87vh; margin-top: 90px; display: flex; flex-direction: column; align-items: center;
+}
+#top-land{
+    width: 80%; height: 50%; border: 1px solid; background-image: url(./images/airport.jpg); background-position: center; background-size: cover;
+}
+#bottom-land {
+    width: 90%; height: 50%; display: flex; align-items: center; justify-content: center;
+}
+#bottom-land h1{
+    color: black; font-family: 'Raleway';
+}
+#bottom-land h1 span{
+    color: green;
+}
+/* Landing page style end */
+
+
+/* Hero Style Start */
+.hero{
+    width: 90%; height: 87vh; margin-top: 90px; margin-left: auto; margin-right: auto; display: flex;
+}
+
+#hero-text{
+    width: 50%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: 'Raleway';
+     line-height: 50px; border-right: 1px solid;
+}
+
+#hero-text span{
+    color: green;
+    font-weight: bold;
+}
+#hero-img{
+    width: 50%; height: 100%; display: flex; justify-content: center; align-items: center;
+}
+#hero-img #plane{
+    position: relative; width: 100%; height: 100%;
+}
+/* Hero Style End */
+
+
+
+/* Our Tour Style Start */
+#our-tour{
+    /* width: 80%; */
+    margin: 5vh auto; border: black; display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.title{
+    width: 100%; padding: 50px 0 100px 0; display: flex; align-items: center; justify-content: center;
+}
+.title h1{
+    background-color: #dcdcdc; padding: 30px 50px; border-radius: 10px; font-family: 'Raleway'; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.row{
+    width: 100%; display: flex; align-items: center; justify-content: space-evenly;
+}
+.card{
+    width: 300px; height: 350px; cursor: pointer; margin-bottom: 50px; border-top-right-radius: 30px; border-bottom-left-radius: 30px;
+    overflow: hidden; position: relative; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px; color: black;
+}
+.card:hover{
+    color: green; transition: 0.5s;
+}
+.card:hover .city-img img{
+    transform: scale(1.3); transition: 1s; color: green;
+}
+.city-img{
+    width: 100%; height: 60%; border-bottom: 1px solid; overflow: hidden;
+}
+.city-img img{
+    width: 100%; height: 100%; transition: 1s;
+}
+.tour-text{
+    width: 100%; height: 40%; display: flex; align-items: center; justify-content: center;
+}
+.tour-text h2{
+    margin-bottom: 20px; text-transform: capitalize; font-family: 'Raleway';
+}
+/* Our Tour Style End */
+
+
+/* Booking Form Style Start */
+form{
+    width: 70%; border: 1px solid; padding: 10px 15px; margin: 10vh auto 0 auto; display: flex; align-items: center;
+    justify-content: center; margin-bottom: 100px;
+}
+
+.big-container {
+    display: flex; justify-content: center; align-items: center;
+}
+#main-container {
+    width: 90%; border-radius: 10px; padding: 10px 15px;
+}
+#main-container h2 {
+    text-align: center; font-family: 'Poppins';
+}
+hr {
+    text-align: center; border: 0.5px solid; margin: 10px 30px;
+}
+.customer-details {
+    display: flex; flex-wrap: wrap; justify-content: space-between;
+}
+.customer-details .detail-container {
+    width: calc(100% / 2 - 20px); margin-bottom: 25px; margin-top: 5px;
+}
+.detail-container span {
+    font-size: 16px; font-family: 'Raleway';
+}
+
+.detail-container .input-container {
+    display: flex; align-items: center; border: 1px solid; padding: 10px 5px; margin-top: 3px;
+}
+
+.detail-container .input-container input {
+    width: 100%; border: none; outline: none; margin-left: 15px; font-size: 16px; font-family: 'Raleway';
+     background-color: transparent;
+}
+#from-city, #to-city{
+    text-transform: capitalize;
+}
+a{
+    margin: 20px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#submit{
+    padding: 10px 15px; background-color: transparent; border: 0; font-size: 16px;
+    font-family: 'Raleway'; background-color: greenyellow;
+}
+/* Booking Form Style End */
+
+
+#output{
+    text-align: center;
+    font-family: 'Raleway';
+    background-color: #f0eded;
+
+}
+
+/* Ticket style start */
+#ticket-window{
+    height: 87vh; display: flex; justify-content: center; align-items: center;
+}
+#ticket{
+    margin-bottom: 20px; width: 900px;  height: 300px;  border: 1px solid;  border-radius: 10px;  margin: auto;
+    display: flex;
+}
+
+#left-ticket{
+    width: 75%;  height: 100%;  border-bottom-left-radius: 10px;  border-top-left-radius: 10px;  border-right: 1px dashed;
+}
+
+#left-ticket-nav{
+    width: 100%;  height: 50px; border-bottom: 1px solid; background-color: green; 
+    border-top-left-radius: 10px; display: flex; justify-content: space-between; padding: 0 3%; align-items: center; overflow: hidden;
+}
+#left-ticket-nav h2{
+    font-family: 'Raleway'; font-weight: 500; margin-right: 5%;
+}
+#left-ticket-nav img{
+    width: 40px; transform: rotate(90deg);
+}
+
+
+#left-main-ticket{
+    width: 100%; height: 248px; display: flex;
+}
+
+#left-left-main{
+    width: 80%; height: 100%; border-bottom-left-radius: 10px; padding: 5px 15px;
+}
+#left-left-main p{
+    font-family: 'Poppins';
+}
+#left-left-main h3 {
+    font-family: 'Raleway';
+    font-size: 16px;
+    text-transform: capitalize;
+}
+#left-name{
+    width: 100%;
+    height: 25%;
+    display: flex;  flex-direction: column;
+    font-family: 'Poppins';
+}
+#left-from{
+    width: 100%; height: 25%;
+    display: flex; justify-content: space-between;
+}
+#from{
+    width: 50%;
+    height: 100%;
+}
+#carrier{
+    width: 50%;
+    height: 100%;
+}
+
+#left-to{
+    width: 100%; height: 25%;
+    display: flex;  justify-content: space-between;
+}
+#to{
+    height: 100%;
+}
+#date{
+    height: 100%;
+}
+#time{
+    height: 100%;
+}
+
+#left-flight{
+    width: 100%; height: 25%;
+    display: flex; justify-content: space-between;
+}
+#flight{
+    height: 100%;
+}
+#seat {
+    height: 100%;
+}
+#gate {
+    height: 100%;
+}
+#board-till {
+    height: 100%;
+}
+
+#left-right-main{
+    width: 20%;  height: 100%;  overflow: hidden;  display: flex;  align-items: center; justify-content: center;
+}
+#left-right-main img{
+    transform: rotate(90deg); width: 240px;
+}
+
+
+#right-ticket {
+    width: 25%;  height: 100%;  border-bottom-right-radius: 10px;  border-top-right-radius: 10px;
+}
+#right-ticket-nav{
+    width: 100%; height: 50px; border-bottom: 1px solid; background-color: green; border-top-right-radius: 10px; display: flex;
+     align-items: center;
+    justify-content: center;
+}
+#right-ticket-nav h2{
+    font-family: 'Raleway'; font-weight: 500
+}
+
+/* Ticket style end */
+
+/* Congratulations style start */
+#congra{
+    width: 100%; height: 13vh; background-color: lightblue; font-family: 'Poppins'; overflow: hidden; text-align: center;
+}
+/* Congratulations style end */
+
+.congra-container{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    z-index: 1000;
+    right: -100%;
+}
+
+#humburger{
+    cursor: pointer;
+    justify-content: end;
+}
+.line{
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin-top: 3px;
+}
+
+
+
+
+@media screen and (max-width: 1150px) {
+    .row{
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .hero {
+            flex-direction: column;
+        }
+        #hero-text {
+            width: 100%; height: 50%; text-align: center;
+        }
+        #hero-img {
+            width: 100%; height: 50%;
+        }
+}
+
+
+@media screen and (max-width: 600px) {
+    #menu-box{
+        display: block;
+    }
+    #right-nav ul{
+        position: absolute; top: 60px; right: -100%; display: flex; flex-direction: column;
+        width: 100%; background-color: #f0eded; text-align: center; gap: 10px; padding: 15px 0;  z-index: -100;  transition: 0.8s;
+    }
+    #right-nav.active ul{
+        right: 0;
+    }
+    .customer-details .detail-container {
+        width: calc(100% / 1 - 20px);   margin-bottom: 25px;   margin-top: 5px;
+    }
+}
+
+
+
+
+
+
